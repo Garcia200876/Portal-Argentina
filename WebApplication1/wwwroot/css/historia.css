@@ -1,0 +1,11 @@
+.hero-historia, .hero-cultura, .hero-esporte { min-height: 92vh; background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
+.hero-historia { background-image: url('/images/historia/banner.jpg'); }
+.hero-cultura { background-image: url('/images/cultura/banner.jpg'); }
+.hero-esporte { background-image: url('/images/esporte/banner.jpg'); }
+.overlay-historia, .overlay-cultura, .overlay-esporte { min-height: 92vh; display: flex; align-items: center; background: linear-gradient(90deg, rgba(2,17,34,.84), rgba(2,17,34,.4) 55%, rgba(0,0,0,.08)); }
+.hero-historia .titulo, .hero-cultura .titulo, .hero-esporte .titulo { color: #fff; font-size: clamp(3rem, 7vw, 5.8rem); font-weight: 800; line-height: .98; letter-spacing: -.055em; max-width: 850px; }
+.hero-historia .descricao, .hero-cultura .descricao, .hero-esporte .descricao { color: rgba(255,255,255,.9); font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.8; max-width: 720px; }
+.historia-conteudo { background: #fff; }
+.historia-conteudo h2 { color: var(--azul); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 25px; }
+.historia-conteudo p { color: var(--muted); font-size: 1.04rem; line-height: 1.9; }
+.historia-conteudo img { border-radius: 24px !important; box-shadow: var(--sombra) !important; }

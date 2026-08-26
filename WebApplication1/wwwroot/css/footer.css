@@ -1,0 +1,8 @@
+.site-footer { position: relative; background: var(--azul-950); color: rgba(255,255,255,.66); overflow: hidden; }
+.site-footer::before { content: ''; position: absolute; width: 420px; height: 420px; border: 1px solid rgba(255,255,255,.05); border-radius: 50%; right: -160px; top: -230px; }
+.site-footer h5 { color: #fff; font-weight: 800; margin-bottom: 18px; }
+.footer-brand { color: #fff; font-size: 1.35rem; font-weight: 800; }
+.footer-brand:hover { color: var(--amarelo); }
+.site-footer a:not(.footer-brand) { display: block; width: fit-content; color: rgba(255,255,255,.64); margin: 9px 0; transition: color var(--transicao), transform var(--transicao); }
+.site-footer a:not(.footer-brand):hover { color: var(--amarelo); transform: translateX(4px); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.1); font-size: .84rem; }

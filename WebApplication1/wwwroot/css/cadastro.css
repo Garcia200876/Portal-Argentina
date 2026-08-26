@@ -1,0 +1,6 @@
+.cadastro-banner { min-height: calc(100vh - 0px); background: url('/images/banner/cadastro-banner.jpg') center/cover no-repeat; padding: 125px 0 80px; position: relative; }
+.cadastro-banner .overlay { min-height: 100%; display: flex; align-items: center; background: linear-gradient(90deg, rgba(3,20,39,.72), rgba(3,20,39,.48)); }
+.cadastro-card { background: rgba(255,255,255,.97); border: 1px solid rgba(255,255,255,.8); border-radius: 28px; padding: clamp(28px, 5vw, 44px); box-shadow: var(--sombra-lg); }
+.cadastro-card h2 { font-weight: 800; color: var(--azul); letter-spacing: -.04em; font-size: clamp(2rem, 5vw, 2.7rem); }
+.cadastro-card p { color: var(--muted); }
+.cadastro-card .btn-warning { min-height: 54px; animation: pulseGlow 2.5s infinite; }

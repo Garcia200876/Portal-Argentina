@@ -1,0 +1,44 @@
+@model PortalArgentina.Models.Receita
+
+@{
+    ViewData["Title"] = Model.Nome;
+}
+
+<div class="container py-5 receita-detalhes">
+    <a asp-action="Index" class="btn btn-outline-primary rounded-pill mb-4">← Todas as receitas</a>
+    <img src="@Model.Imagem" class="capa" alt="@Model.Nome" />
+
+    <div class="py-4">
+        <span class="eyebrow">RECEITA ARGENTINA</span>
+        <h1 class="display-5 fw-bold text-primary">@Model.Nome</h1>
+        <div class="receita-meta my-3">
+            <span>⏱ @Model.Tempo</span>
+            <span>⭐ @Model.Dificuldade</span>
+        </div>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-lg-5">
+            <div class="admin-card">
+                <h2 class="h4 fw-bold text-primary">Ingredientes</h2>
+                <ul class="mt-3 mb-0">
+                    @foreach (var item in Model.Ingredientes)
+                    {
+                        <li class="mb-2">@item</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="admin-card">
+                <h2 class="h4 fw-bold text-primary">Modo de preparo</h2>
+                <ol class="mt-3 mb-0">
+                    @foreach (var passo in Model.Preparo)
+                    {
+                        <li class="mb-3">@passo</li>
+                    }
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

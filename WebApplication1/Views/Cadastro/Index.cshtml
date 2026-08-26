@@ -1,0 +1,52 @@
+@model PortalArgentina.Models.Usuario
+
+@{
+    ViewData["Title"] = "Criar conta";
+}
+
+<section class="cadastro-banner">
+    <div class="overlay">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="cadastro-card">
+                        <span class="eyebrow">CLUBE ARGENTINA</span>
+                        <h2>Crie sua conta 🇦🇷</h2>
+                        <p>Acesse o quiz, mapa, receitas e ranking em uma área exclusiva.</p>
+
+                        <form asp-action="Index" method="post">
+                            @Html.AntiForgeryToken()
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                            <div class="mb-3">
+                                <label asp-for="Nome" class="form-label fw-semibold">Nome</label>
+                                <input asp-for="Nome" class="form-control" placeholder="Seu nome" autocomplete="name" />
+                                <span asp-validation-for="Nome" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Email" class="form-label fw-semibold">E-mail</label>
+                                <input asp-for="Email" class="form-control" placeholder="voce@email.com" autocomplete="email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label asp-for="Senha" class="form-label fw-semibold">Senha</label>
+                                <input asp-for="Senha" type="password" class="form-control" placeholder="Mínimo de 6 caracteres" autocomplete="new-password" />
+                                <span asp-validation-for="Senha" class="text-danger"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-warning w-100 py-3 rounded-pill fw-bold">Criar minha conta</button>
+                        </form>
+
+                        <p class="text-center mt-4 mb-0">Já possui uma conta? <a asp-controller="Login" asp-action="Index" class="fw-bold">Entrar</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

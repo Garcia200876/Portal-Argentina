@@ -1,0 +1,36 @@
+@media (max-width: 991.98px) {
+    .navbar { min-height: 70px; padding: 11px 0; }
+    .navbar-collapse { margin-top: 12px; padding: 15px; border: 1px solid rgba(255,255,255,.08); border-radius: 18px; background: rgba(4,24,45,.96); backdrop-filter: blur(14px); box-shadow: 0 20px 45px rgba(0,0,0,.2); }
+    .navbar-nav { align-items: stretch !important; }
+    .nav-link { margin: 2px 0; padding: 10px 12px !important; }
+    .user-greeting { display: none; }
+    .navbar .btn { margin: 5px 0 !important; width: 100%; }
+    .hero, .overlay, .hero-content { min-height: 820px; }
+    .hero-content { padding-top: 80px; }
+    .hero-scroll { display: none; }
+    .hero-historia, .hero-cultura, .hero-esporte, .overlay-historia, .overlay-cultura, .overlay-esporte, .hero-turismo, .overlay-turismo { min-height: 800px; }
+    #mapaArgentina { height: 480px; }
+    .destino-info { align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 767.98px) {
+    section { padding: 70px 0; }
+    .quiz-banner, .receitas-banner, .clube-banner, .admin-banner, .mapa-hero { padding-top: 125px; }
+    .quiz-card { padding: 23px; }
+    .destination-card img, .hero-cultura + section + section .card-img-top { height: 215px; }
+    .image-frame { transform: none; }
+    .image-frame img { transform: none; height: 330px; }
+    .image-frame:hover img { transform: scale(1.04); }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand span { font-size: 1rem; }
+    .hero, .overlay, .hero-content { min-height: 750px; }
+    .hero-content { padding-top: 95px; }
+    .hero-actions .btn { width: 100%; }
+    .image-frame img { height: 280px; }
+    #mapaArgentina { height: 420px; }
+    .map-card, .destinos-card, .destino-info, .admin-card, .quiz-card, .receita-card { border-radius: 18px; }
+    .receita-card img { height: 230px; }
+    #backToTop { right: 14px; bottom: 14px; width: 42px; height: 42px; }
+}

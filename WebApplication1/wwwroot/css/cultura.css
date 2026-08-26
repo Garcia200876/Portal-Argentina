@@ -1,0 +1,10 @@
+.hero-cultura + section { background: #fff; }
+.hero-cultura + section h2, .hero-cultura + section + section h2 { color: var(--azul); font-weight: 800; letter-spacing: -.035em; }
+.hero-cultura + section p { color: var(--muted); font-size: 1.04rem; line-height: 1.9; }
+.hero-cultura + section img { border-radius: 24px !important; box-shadow: var(--sombra) !important; }
+.hero-cultura + section + section { background: var(--fundo); }
+.hero-cultura + section + section .card { border: 1px solid var(--borda); border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra-sm); transition: var(--transicao); }
+.hero-cultura + section + section .card:hover { transform: translateY(-7px); box-shadow: var(--sombra); }
+.hero-cultura + section + section .card-img-top { height: 235px; object-fit: cover; }
+.hero-cultura + section + section .card-body { padding: 24px; }
+.hero-cultura + section + section .card h4 { color: var(--azul); font-weight: 800; }

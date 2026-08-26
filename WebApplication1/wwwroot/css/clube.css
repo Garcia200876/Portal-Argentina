@@ -1,0 +1,11 @@
+.clube-banner { background: radial-gradient(circle at 85% 20%, rgba(44,140,255,.32), transparent 28%), linear-gradient(135deg, var(--azul-950), var(--azul-2)); color: white; padding: 145px 20px 78px; }
+.clube-banner h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -.05em; }
+.clube-banner p { color: rgba(255,255,255,.82); font-size: 1.05rem; margin-top: 10px; }
+.clube-card { border: 1px solid var(--borda); border-radius: var(--raio); box-shadow: var(--sombra-sm); transition: var(--transicao); background: #fff; overflow: hidden; }
+.clube-card:hover { transform: translateY(-9px); box-shadow: var(--sombra); border-color: #cbddec; }
+.clube-card .card-body { padding: 30px 24px; }
+.icone { font-size: 3.5rem; margin-bottom: 16px; transition: transform 350ms ease; }
+.clube-card:hover .icone { transform: scale(1.08) translateY(-3px); }
+.clube-card h3 { color: var(--azul); font-weight: 800; }
+.clube-card p { color: var(--muted); min-height: 80px; }
+.clube-card .btn { border-radius: 30px; padding: 10px 28px; }

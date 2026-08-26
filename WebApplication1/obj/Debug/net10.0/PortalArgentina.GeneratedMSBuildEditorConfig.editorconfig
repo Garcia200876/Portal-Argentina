@@ -1,0 +1,108 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PortalArgentina
+build_property.RootNamespace = PortalArgentina
+build_property.ProjectDir = C:\Users\daviz\OneDrive\Desktop\Portal-Argentina-FINAL\Portal-Argentina-FINAL\Projeto Argentina\WebApplication1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 10.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\daviz\OneDrive\Desktop\Portal-Argentina-FINAL\Portal-Argentina-FINAL\Projeto Argentina\WebApplication1
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Cadastro/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Clube/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Cultura/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VsdHVyYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Esporte/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwb3J0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Historia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Mapa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFwYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Quiz/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Quiz/Resultado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxSZXN1bHRhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Ranking/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFua2luZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Receitas/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Receitas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Turismo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVyaXNtb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/daviz/OneDrive/Desktop/Portal-Argentina-FINAL/Portal-Argentina-FINAL/Projeto Argentina/WebApplication1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5mbl646s45

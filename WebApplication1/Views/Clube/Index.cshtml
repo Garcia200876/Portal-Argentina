@@ -1,0 +1,23 @@
+@using Microsoft.AspNetCore.Http
+
+@{
+    ViewData["Title"] = "Clube Argentina";
+    var nome = Context.Session.GetString("UsuarioNome");
+}
+
+<section class="clube-banner">
+    <div class="container text-center">
+        <span class="eyebrow eyebrow-light">ÁREA EXCLUSIVA</span>
+        <h1>Clube Argentina 🇦🇷</h1>
+        <p>Bem-vindo, <strong>@nome</strong>. Escolha uma experiência para continuar.</p>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-3"><div class="card clube-card h-100"><div class="card-body text-center"><div class="icone">🧠</div><h3>Quiz</h3><p>Teste seus conhecimentos e registre sua melhor pontuação.</p><a asp-controller="Quiz" asp-action="Index" class="btn btn-warning">Jogar</a></div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card clube-card h-100"><div class="card-body text-center"><div class="icone">🗺️</div><h3>Mapa</h3><p>Explore destinos argentinos em um mapa interativo.</p><a asp-controller="Mapa" asp-action="Index" class="btn btn-primary">Explorar</a></div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card clube-card h-100"><div class="card-body text-center"><div class="icone">🍽️</div><h3>Receitas</h3><p>Descubra pratos tradicionais e veja o modo de preparo.</p><a asp-controller="Receitas" asp-action="Index" class="btn btn-success">Ver receitas</a></div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card clube-card h-100"><div class="card-body text-center"><div class="icone">🏆</div><h3>Ranking</h3><p>Veja quem está no topo do placar do Portal Argentina.</p><a asp-controller="Ranking" asp-action="Index" class="btn btn-outline-primary">Ver ranking</a></div></div></div>
+    </div>
+</section>

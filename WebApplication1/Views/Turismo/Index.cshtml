@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Turismo";
+}
+
+<section class="hero-turismo">
+    <div class="overlay-turismo">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-8">
+                    <span class="eyebrow eyebrow-light">DESTINOS</span>
+                    <h1 class="titulo">Turismo na Argentina</h1>
+                    <p class="descricao">Geleiras, montanhas, grandes cidades e paisagens que mudam completamente de uma região para outra.</p>
+                    <a href="#destinos" class="btn btn-warning btn-lg rounded-pill mt-3 px-4">Explorar destinos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="destinos" class="container py-5">
+    <div class="section-heading text-center mb-5"><span class="eyebrow">IMPRESCINDÍVEIS</span><h2>Principais destinos</h2></div>
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4"><article class="destination-card"><img src="~/images/turismo/iguazu.jpg" alt="Cataratas do Iguaçu" loading="lazy"><div><span>Misiones</span><h3>Cataratas do Iguaçu</h3><p>Um dos grandes espetáculos naturais da América do Sul.</p><a asp-controller="Mapa" asp-action="Index" asp-route-destino="iguazu" class="btn btn-outline-primary rounded-pill">Ver no mapa</a></div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="destination-card"><img src="~/images/turismo/glaciar.jpg" alt="Glaciar Perito Moreno" loading="lazy"><div><span>Patagônia</span><h3>Glaciar Perito Moreno</h3><p>Uma das paisagens glaciais mais famosas do planeta.</p><a asp-controller="Mapa" asp-action="Index" asp-route-destino="perito-moreno" class="btn btn-outline-primary rounded-pill">Ver no mapa</a></div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="destination-card"><img src="~/images/turismo/obelisco.jpg" alt="Obelisco de Buenos Aires" loading="lazy"><div><span>Buenos Aires</span><h3>Obelisco</h3><p>Um dos símbolos mais conhecidos da capital argentina.</p><a asp-controller="Mapa" asp-action="Index" asp-route-destino="buenos-aires" class="btn btn-outline-primary rounded-pill">Ver no mapa</a></div></article></div>
+    </div>
+</section>
+
+<section class="flavors-section">
+    <div class="container py-5">
+        <div class="section-heading text-center mb-5"><span class="eyebrow">SABORES</span><h2>Uma viagem também pela mesa</h2></div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4"><article class="destination-card"><img src="~/images/turismo/empanadas.jpg" alt="Empanadas argentinas" loading="lazy"><div><h3>Empanadas</h3><p>Massa recheada, prática e presente em diferentes regiões do país.</p><a asp-controller="Receitas" asp-action="Detalhes" asp-route-id="1" class="btn btn-warning rounded-pill">Ver receita</a></div></article></div>
+            <div class="col-md-6 col-lg-4"><article class="destination-card"><img src="~/images/turismo/asado.jpg" alt="Asado argentino" loading="lazy"><div><h3>Asado</h3><p>Um clássico da culinária argentina preparado lentamente na brasa.</p><a asp-controller="Receitas" asp-action="Detalhes" asp-route-id="5" class="btn btn-warning rounded-pill">Ver receita</a></div></article></div>
+            <div class="col-md-6 col-lg-4"><article class="destination-card"><img src="~/images/turismo/alfajor.jpg" alt="Alfajor argentino" loading="lazy"><div><h3>Alfajor</h3><p>Doce tradicional com diferentes versões e muito doce de leite.</p><a asp-controller="Receitas" asp-action="Detalhes" asp-route-id="4" class="btn btn-warning rounded-pill">Ver receita</a></div></article></div>
+        </div>
+    </div>
+</section>

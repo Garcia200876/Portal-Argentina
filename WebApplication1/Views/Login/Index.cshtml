@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="login-page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+                <div class="login-card">
+                    <span class="eyebrow">CLUBE ARGENTINA</span>
+                    <h2>Bem-vindo de volta!</h2>
+                    <p>Entre para continuar sua experiência pelo Portal Argentina.</p>
+
+                    @if (TempData["Sucesso"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["Sucesso"]</div>
+                    }
+
+                    <form asp-action="Index" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="mb-3">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" class="form-control" placeholder="voce@email.com" autocomplete="email" required />
+                        </div>
+                        <div class="mb-4">
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" name="senha" class="form-control" placeholder="Sua senha" autocomplete="current-password" required />
+                        </div>
+                        <button type="submit" class="btn-login">Entrar</button>
+                    </form>
+
+                    @if (ViewBag.Mensagem != null)
+                    {
+                        <div class="alert alert-danger mt-4" role="alert">@ViewBag.Mensagem</div>
+                    }
+
+                    <hr class="my-4" />
+                    <p class="cadastro">Ainda não possui conta? <a asp-controller="Cadastro" asp-action="Index">Cadastre-se</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

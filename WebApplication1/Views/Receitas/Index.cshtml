@@ -1,0 +1,34 @@
+@model List<PortalArgentina.Models.Receita>
+
+@{
+    ViewData["Title"] = "Receitas";
+}
+
+<section class="receitas-banner">
+    <div class="container">
+        <span class="eyebrow eyebrow-light">SABORES DA ARGENTINA</span>
+        <h1>Receitas Argentinas 🇦🇷</h1>
+        <p>Conheça alguns dos pratos mais tradicionais e descubra como são preparados.</p>
+    </div>
+</section>
+
+<div class="container py-5">
+    <div class="row g-4">
+        @foreach (var receita in Model)
+        {
+            <div class="col-md-6 col-lg-4">
+                <article class="card receita-card">
+                    <img src="@receita.Imagem" alt="@receita.Nome" loading="lazy" />
+                    <div class="card-body p-4">
+                        <h3>@receita.Nome</h3>
+                        <div class="receita-meta my-3">
+                            <span>⏱ @receita.Tempo</span>
+                            <span>⭐ @receita.Dificuldade</span>
+                        </div>
+                        <a asp-action="Detalhes" asp-route-id="@receita.Id" class="btn btn-warning rounded-pill px-4">Ver receita</a>
+                    </div>
+                </article>
+            </div>
+        }
+    </div>
+</div>

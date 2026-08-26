@@ -1,0 +1,12 @@
+.hero { min-height: 100vh; background: url('/images/banner/banner.jpg') center/cover no-repeat; position: relative; isolation: isolate; }
+.hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 75% 45%, rgba(35,129,222,.18), transparent 32%); z-index: -1; }
+.overlay { min-height: 100vh; background: linear-gradient(90deg, rgba(2,17,34,.86) 0%, rgba(2,17,34,.58) 45%, rgba(0,0,0,.12) 100%); }
+.hero-content { min-height: 100vh; position: relative; padding-top: 55px; }
+.titulo { color: #fff; font-size: clamp(3.8rem, 9vw, 7rem); line-height: .9; font-weight: 800; letter-spacing: -.06em; text-shadow: 0 15px 45px rgba(0,0,0,.28); }
+.subtitulo { color: var(--amarelo); font-size: clamp(1.55rem, 4vw, 2.7rem); font-weight: 700; margin: 20px 0; letter-spacing: -.025em; }
+.descricao { color: rgba(255,255,255,.9); font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.8; max-width: 720px; }
+.hero .eyebrow { animation: fadeUp .7s ease both; }
+.hero .titulo { animation: fadeUp .75s .08s ease both; }
+.hero .subtitulo { animation: fadeUp .75s .16s ease both; }
+.hero .descricao { animation: fadeUp .75s .24s ease both; }
+.hero .hero-actions { animation: fadeUp .75s .32s ease both; }

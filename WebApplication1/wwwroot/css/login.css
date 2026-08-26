@@ -1,0 +1,10 @@
+.login-page { min-height: calc(100vh - 0px); background: radial-gradient(circle at 80% 15%, rgba(44,140,255,.35), transparent 28%), linear-gradient(135deg, var(--azul-950), var(--azul-2)); display: flex; align-items: center; padding: 125px 20px 80px; }
+.login-card { background: rgba(255,255,255,.98); border: 1px solid rgba(255,255,255,.85); border-radius: 28px; padding: clamp(28px, 5vw, 44px); box-shadow: var(--sombra-lg); }
+.login-card h2 { color: var(--azul); font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; letter-spacing: -.04em; }
+.login-card p { color: var(--muted); }
+.login-card label { font-weight: 700; color: var(--azul-900); margin-bottom: 7px; }
+.login-card .form-control { min-height: 54px; }
+.btn-login { width: 100%; min-height: 54px; border: 0; border-radius: 14px; background: linear-gradient(135deg, var(--amarelo), #ffd968); color: #17202b; font-weight: 800; box-shadow: 0 12px 28px rgba(255,185,0,.2); transition: var(--transicao); }
+.btn-login:hover { transform: translateY(-2px); box-shadow: 0 16px 35px rgba(255,185,0,.3); }
+.cadastro { text-align: center; margin: 20px 0 0; }
+.cadastro a { color: var(--azul-2); font-weight: 800; }

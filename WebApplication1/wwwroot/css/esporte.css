@@ -1,0 +1,10 @@
+.hero-esporte + section { background: var(--fundo); }
+.hero-esporte + section .card { border: 1px solid var(--borda); border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra-sm); transition: var(--transicao); }
+.hero-esporte + section .card:hover { transform: translateY(-7px); box-shadow: var(--sombra); }
+.hero-esporte + section .card-img-top { height: 230px; object-fit: cover; }
+.hero-esporte + section .card-body { padding: 24px; }
+.hero-esporte + section h4 { color: var(--azul); font-weight: 800; }
+.hero-esporte + section p { color: var(--muted); line-height: 1.7; }
+.hero-esporte ~ section h2 { color: var(--azul); font-weight: 800; letter-spacing: -.035em; }
+.hero-esporte ~ section { background: #fff; }
+.hero-esporte ~ section + section { background: var(--fundo); }

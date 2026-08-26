@@ -1,0 +1,119 @@
+@using Microsoft.AspNetCore.Http
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portal Argentina: história, cultura, turismo, esportes, receitas e experiências interativas." />
+    <title>@ViewData["Title"] | Portal Argentina</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/historia.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/cultura.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/turismo.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/esporte.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/cadastro.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/quiz.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/receitas.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/clube.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/responsive.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">🇦🇷 <span>Portal Argentina</span></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index" data-nav-controller="Home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Historia" asp-action="Index" data-nav-controller="Historia">História</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Cultura" asp-action="Index" data-nav-controller="Cultura">Cultura</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Turismo" asp-action="Index" data-nav-controller="Turismo">Turismo</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Esporte" asp-action="Index" data-nav-controller="Esporte">Esporte</a></li>
+
+                        @if (Context.Session.GetString("UsuarioNome") == null)
+                        {
+                            <li class="nav-item ms-lg-2"><a class="btn btn-outline-light rounded-pill px-3" asp-controller="Cadastro" asp-action="Index">Cadastrar</a></li>
+                            <li class="nav-item"><a class="btn btn-warning rounded-pill px-4 ms-lg-2" asp-controller="Login" asp-action="Index">Entrar</a></li>
+                        }
+                        else
+                        {
+                            <li class="nav-item ms-lg-2"><a class="nav-link clube-link" asp-controller="Clube" asp-action="Index">Clube 🇦🇷</a></li>
+                            @if (Context.Session.GetString("UsuarioAdmin") == "true")
+                            {
+                                <li class="nav-item"><a class="nav-link" asp-controller="Admin" asp-action="Index">Admin</a></li>
+                            }
+                            <li class="nav-item user-greeting"><span class="nav-link">Olá, <strong>@Context.Session.GetString("UsuarioNome")</strong> 👋</span></li>
+                            <li class="nav-item">
+                                <form asp-controller="Login" asp-action="Sair" method="post" class="m-0">
+                                    <button type="submit" class="btn btn-danger rounded-pill px-4 ms-lg-2">Sair</button>
+                                </form>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <a asp-controller="Home" asp-action="Index" class="footer-brand">🇦🇷 Portal Argentina</a>
+                    <p class="mt-3 mb-0">Uma experiência interativa para descobrir a história, a cultura e as paisagens da Argentina.</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h5>Explore</h5>
+                    <a asp-controller="Historia" asp-action="Index">História</a>
+                    <a asp-controller="Cultura" asp-action="Index">Cultura</a>
+                    <a asp-controller="Turismo" asp-action="Index">Turismo</a>
+                    <a asp-controller="Esporte" asp-action="Index">Esporte</a>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <h5>Área interativa</h5>
+                    @if (Context.Session.GetString("UsuarioNome") != null)
+                    {
+                        <a asp-controller="Quiz" asp-action="Index">Quiz</a>
+                        <a asp-controller="Mapa" asp-action="Index">Mapa Interativo</a>
+                        <a asp-controller="Receitas" asp-action="Index">Receitas</a>
+                        <a asp-controller="Ranking" asp-action="Index">Ranking</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Login" asp-action="Index">Entrar no Clube Argentina</a>
+                        <a asp-controller="Cadastro" asp-action="Index">Criar conta</a>
+                    }
+                </div>
+            </div>
+            <div class="footer-bottom mt-4 pt-4">© @DateTime.Now.Year Portal Argentina · Projeto educacional</div>
+        </div>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

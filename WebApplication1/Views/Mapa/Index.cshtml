@@ -1,0 +1,115 @@
+@model List<PortalArgentina.Models.Destino>
+
+@using System.Text.Json
+
+@{
+    ViewData["Title"] = "Mapa Interativo";
+    var destinosJson = JsonSerializer.Serialize(Model);
+}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<section class="mapa-hero">
+    <div class="container">
+        <span class="eyebrow">CLUBE ARGENTINA</span>
+        <h1>Mapa Interativo 🇦🇷</h1>
+        <p>Explore destinos, regiões e paisagens marcantes da Argentina.</p>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="map-card">
+                <div id="mapaArgentina" aria-label="Mapa interativo da Argentina"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="destinos-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <span class="eyebrow">EXPLORE</span>
+                        <h2 class="h4 mb-0">Destinos</h2>
+                    </div>
+                    <span class="badge rounded-pill text-bg-primary">@Model.Count</span>
+                </div>
+
+                <div class="destinos-list">
+                    @foreach (var item in Model)
+                    {
+                        <button type="button" class="destino-item" data-destino="@item.Id">
+                            <span class="destino-icone">@item.Icone</span>
+                            <span>
+                                <strong>@item.Nome</strong>
+                                <small>@item.Regiao</small>
+                            </span>
+                            <span class="ms-auto">›</span>
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="destinoInfo" class="destino-info mt-4" hidden>
+        <div>
+            <span id="destinoRegiao" class="eyebrow"></span>
+            <h2 id="destinoNome"></h2>
+            <p id="destinoDescricao" class="mb-0"></p>
+        </div>
+        <a asp-controller="Turismo" asp-action="Index" class="btn btn-warning rounded-pill px-4">Ver turismo</a>
+    </div>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    const destinos = @Html.Raw(destinosJson);
+    const destinoInicial = @Html.Raw(JsonSerializer.Serialize((string?)ViewBag.DestinoInicial ?? ""));
+
+    const mapa = L.map('mapaArgentina', { scrollWheelZoom: true }).setView([-38.4161, -63.6167], 4.2);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(mapa);
+
+    const marcadores = {};
+    const info = document.getElementById('destinoInfo');
+    const nome = document.getElementById('destinoNome');
+    const regiao = document.getElementById('destinoRegiao');
+    const descricao = document.getElementById('destinoDescricao');
+
+    function selecionarDestino(id, moverMapa = true) {
+        const destino = destinos.find(d => d.Id === id);
+        if (!destino) return;
+
+        nome.textContent = `${destino.Icone} ${destino.Nome}`;
+        regiao.textContent = destino.Regiao;
+        descricao.textContent = destino.Descricao;
+        info.hidden = false;
+
+        if (moverMapa) {
+            mapa.flyTo([destino.Latitude, destino.Longitude], 7, { duration: 1.2 });
+        }
+
+        if (marcadores[id]) {
+            marcadores[id].openPopup();
+        }
+    }
+
+    destinos.forEach(destino => {
+        const marker = L.marker([destino.Latitude, destino.Longitude]).addTo(mapa);
+        marker.bindPopup(`<strong>${destino.Icone} ${destino.Nome}</strong><br><span>${destino.Regiao}</span>`);
+        marker.on('click', () => selecionarDestino(destino.Id, false));
+        marcadores[destino.Id] = marker;
+    });
+
+    document.querySelectorAll('.destino-item').forEach(botao => {
+        botao.addEventListener('click', () => selecionarDestino(botao.dataset.destino));
+    });
+
+    if (destinoInicial) {
+        selecionarDestino(destinoInicial);
+    }
+</script>

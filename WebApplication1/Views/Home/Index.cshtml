@@ -1,0 +1,73 @@
+@{
+    ViewData["Title"] = "Portal Argentina";
+}
+
+<section class="hero">
+    <div class="overlay">
+        <div class="container h-100">
+            <div class="row align-items-center hero-content">
+                <div class="col-lg-8">
+                    <span class="eyebrow eyebrow-light">DESCUBRA UM PAÍS DE EXTREMOS</span>
+                    <h1 class="titulo">Argentina</h1>
+                    <h2 class="subtitulo">A Terra do Sol de Maio</h2>
+                    <p class="descricao">Viaje pela história, cultura, gastronomia, esportes e paisagens de um dos países mais fascinantes da América do Sul.</p>
+                    <div class="hero-actions mt-4">
+                        <a asp-controller="Turismo" asp-action="Index" class="btn btn-warning btn-lg rounded-pill px-4">Explorar destinos</a>
+                        @if (Context.Session.GetString("UsuarioNome") == null)
+                        {
+                            <a asp-controller="Cadastro" asp-action="Index" class="btn btn-outline-light btn-lg rounded-pill px-4">Criar conta</a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Clube" asp-action="Index" class="btn btn-outline-light btn-lg rounded-pill px-4">Entrar no Clube</a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll">Role para explorar <span>↓</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="sobre-argentina">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="eyebrow">UM PAÍS, MUITAS EXPERIÊNCIAS</span>
+                <h2>Conheça a Argentina</h2>
+                <p>A Argentina combina grandes centros urbanos, cordilheiras, geleiras, desertos, vinhedos e uma cultura marcada por música, dança e gastronomia.</p>
+                <p>Neste portal você pode navegar pelo conteúdo, conhecer destinos, descobrir pratos tradicionais e testar seus conhecimentos no quiz.</p>
+                <a asp-controller="Historia" asp-action="Index" class="btn btn-primary rounded-pill px-4 mt-2">Começar pela história</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="image-frame"><img src="~/images/home/casa-rosada.jpg" class="img-fluid" alt="Casa Rosada em Buenos Aires" loading="lazy"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="explore-section">
+    <div class="container">
+        <div class="section-heading text-center mb-5">
+            <span class="eyebrow">PORTAL</span>
+            <h2>Por onde você quer começar?</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3"><a asp-controller="Historia" asp-action="Index" class="explore-card"><span>📖</span><h3>História</h3><p>Dos povos originários à independência e à formação do país.</p></a></div>
+            <div class="col-md-6 col-lg-3"><a asp-controller="Cultura" asp-action="Index" class="explore-card"><span>🎭</span><h3>Cultura</h3><p>Tango, mate, folclore e tradições que atravessam gerações.</p></a></div>
+            <div class="col-md-6 col-lg-3"><a asp-controller="Turismo" asp-action="Index" class="explore-card"><span>🗺️</span><h3>Turismo</h3><p>Destinos para conhecer dos grandes centros à Patagônia.</p></a></div>
+            <div class="col-md-6 col-lg-3"><a asp-controller="Esporte" asp-action="Index" class="explore-card"><span>⚽</span><h3>Esporte</h3><p>Grandes atletas, clubes e momentos marcantes.</p></a></div>
+        </div>
+    </div>
+</section>
+
+<section class="estatisticas">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-6 col-lg-3"><strong>45M+</strong><span>habitantes</span></div>
+            <div class="col-6 col-lg-3"><strong>2,78 mi</strong><span>km² de área</span></div>
+            <div class="col-6 col-lg-3"><strong>3</strong><span>Copas do Mundo</span></div>
+            <div class="col-6 col-lg-3"><strong>1816</strong><span>independência</span></div>
+        </div>
+    </div>
+</section>

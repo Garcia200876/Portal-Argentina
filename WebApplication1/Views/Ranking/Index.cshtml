@@ -1,0 +1,60 @@
+@model List<PortalArgentina.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Ranking";
+}
+
+<section class="quiz-banner">
+    <div class="container text-center">
+        <span class="eyebrow eyebrow-light">CLUBE ARGENTINA</span>
+        <h1>Ranking do Quiz 🏆</h1>
+        <p>Os melhores resultados registrados no Portal Argentina.</p>
+    </div>
+</section>
+
+<section class="container py-5">
+    @if (Model.Count == 0)
+    {
+        <div class="quiz-card text-center">
+            <h2>Ainda não há pontuações.</h2>
+            <p class="text-muted">Seja o primeiro a aparecer por aqui.</p>
+            <a asp-controller="Quiz" asp-action="Index" class="btn btn-warning rounded-pill px-4">Jogar quiz</a>
+        </div>
+    }
+    else
+    {
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="quiz-card p-0 overflow-hidden">
+                    <div class="list-group list-group-flush">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            <div class="list-group-item d-flex justify-content-between align-items-center py-3 px-4">
+                                <div class="d-flex align-items-center gap-3">
+                                    @if (i == 0)
+                                    {
+                                        <img src="~/images/medalhas/ouro.png" alt="1º lugar" width="34" />
+                                    }
+                                    else if (i == 1)
+                                    {
+                                        <img src="~/images/medalhas/prata.png" alt="2º lugar" width="34" />
+                                    }
+                                    else if (i == 2)
+                                    {
+                                        <img src="~/images/medalhas/bronze.png" alt="3º lugar" width="34" />
+                                    }
+                                    else
+                                    {
+                                        <strong class="text-muted" style="width:34px">@(i + 1)º</strong>
+                                    }
+                                    <span class="fw-semibold">@Model[i].Nome</span>
+                                </div>
+                                <span class="badge bg-primary rounded-pill px-3">@Model[i].PontosQuiz pts</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</section>

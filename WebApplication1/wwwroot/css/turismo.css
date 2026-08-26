@@ -1,0 +1,5 @@
+.hero-turismo { min-height: 92vh; background: url('/images/turismo/banner.jpg') center/cover no-repeat; position: relative; }
+.overlay-turismo { min-height: 92vh; display: flex; align-items: center; background: linear-gradient(90deg, rgba(2,17,34,.84), rgba(2,17,34,.42) 55%, rgba(0,0,0,.08)); }
+.hero-turismo .titulo { color: #fff; font-size: clamp(3rem, 7vw, 5.8rem); font-weight: 800; line-height: .96; letter-spacing: -.055em; }
+.hero-turismo .descricao { max-width: 760px; color: rgba(255,255,255,.91); }
+.hero-turismo + section { background: var(--fundo); }

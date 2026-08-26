@@ -1,0 +1,13 @@
+.receitas-banner { background: radial-gradient(circle at 80% 15%, rgba(44,140,255,.3), transparent 26%), linear-gradient(135deg, var(--azul-950), var(--azul-2)); color: #fff; text-align: center; padding: 145px 0 78px; }
+.receitas-banner h1 { font-weight: 800; font-size: clamp(2.5rem, 6vw, 4.2rem); letter-spacing: -.05em; }
+.receitas-banner p { color: rgba(255,255,255,.82); }
+.receita-card { border: 1px solid var(--borda); border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra-sm); transition: var(--transicao); height: 100%; background: #fff; }
+.receita-card:hover { transform: translateY(-8px); box-shadow: var(--sombra); }
+.receita-card img { height: 280px; width: 100%; object-fit: cover; transition: transform 650ms ease; }
+.receita-card:hover img { transform: scale(1.055); }
+.receita-card h3 { color: var(--azul); font-weight: 800; letter-spacing: -.025em; }
+.receita-meta { display: flex; flex-wrap: wrap; gap: 9px; }
+.receita-meta span { background: #eef5ff; color: var(--azul); padding: 8px 13px; border-radius: 999px; font-size: .84rem; font-weight: 700; }
+.receita-detalhes { max-width: 1000px; margin: 0 auto; padding-top: 125px !important; }
+.receita-detalhes .capa { width: 100%; max-height: 500px; object-fit: cover; border-radius: 28px; box-shadow: var(--sombra); }
+.receita-detalhes .admin-card { height: 100%; }

@@ -1,0 +1,47 @@
+@model List<PortalArgentina.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Administração";
+    var administradores = Model.Count(u => u.Administrador);
+    var media = Model.Count == 0 ? 0 : Model.Average(u => u.PontosQuiz);
+}
+
+<section class="admin-banner">
+    <div class="container">
+        <span class="eyebrow eyebrow-light">PAINEL RESTRITO</span>
+        <h1>Administração</h1>
+        <p class="mb-0">Visão geral das contas cadastradas e do desempenho no quiz.</p>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="row g-4 mb-4">
+        <div class="col-md-4"><div class="admin-card"><span class="eyebrow">USUÁRIOS</span><div class="display-6 fw-bold text-primary">@Model.Count</div><p class="mb-0 text-muted">contas cadastradas</p></div></div>
+        <div class="col-md-4"><div class="admin-card"><span class="eyebrow">ADMINS</span><div class="display-6 fw-bold text-primary">@administradores</div><p class="mb-0 text-muted">contas com acesso administrativo</p></div></div>
+        <div class="col-md-4"><div class="admin-card"><span class="eyebrow">MÉDIA</span><div class="display-6 fw-bold text-primary">@media.ToString("0.0")/10</div><p class="mb-0 text-muted">pontuação média registrada</p></div></div>
+    </div>
+
+    <div class="admin-card">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <div><h2 class="h4 fw-bold text-primary mb-1">Usuários cadastrados</h2><p class="text-muted mb-0">Os dados abaixo são exibidos apenas para administradores.</p></div>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary rounded-pill">Voltar ao portal</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table admin-table align-middle mb-0">
+                <thead><tr><th>#</th><th>Nome</th><th>E-mail</th><th>Perfil</th><th>Pontuação</th></tr></thead>
+                <tbody>
+                @foreach (var usuario in Model)
+                {
+                    <tr>
+                        <td>@usuario.Id</td>
+                        <td class="fw-semibold">@usuario.Nome</td>
+                        <td>@usuario.Email</td>
+                        <td><span class="badge @(usuario.Administrador ? "text-bg-warning" : "text-bg-secondary")">@(usuario.Administrador ? "Administrador" : "Usuário")</span></td>
+                        <td><span class="badge text-bg-primary rounded-pill">@usuario.PontosQuiz/10</span></td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

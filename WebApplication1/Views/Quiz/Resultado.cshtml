@@ -1,0 +1,44 @@
+@model int
+
+@{
+    ViewData["Title"] = "Resultado do Quiz";
+    var percentual = Model * 10;
+}
+
+<section class="quiz-banner">
+    <div class="container text-center">
+        <span class="eyebrow eyebrow-light">RESULTADO</span>
+        <h1>Você chegou ao fim! 🇦🇷</h1>
+    </div>
+</section>
+
+<div class="container py-5">
+    <div class="quiz-card text-center">
+        <p class="text-uppercase text-muted fw-bold small mb-2">Sua pontuação</p>
+        <div class="display-1 fw-bold text-primary">@Model<span class="fs-2 text-muted"> / 10</span></div>
+        <p class="lead mt-2">@percentual% de aproveitamento</p>
+
+        @if (Model == 10)
+        {
+            <div class="alert alert-success">Perfeito! Você está praticamente pronto para um guia turístico argentino. 🏆</div>
+        }
+        else if (Model >= 7)
+        {
+            <div class="alert alert-info">Muito bom! Você já conhece bastante da Argentina. 🇦🇷</div>
+        }
+        else if (Model >= 5)
+        {
+            <div class="alert alert-warning">Bom começo! Explore o portal e tente novamente.</div>
+        }
+        else
+        {
+            <div class="alert alert-danger">Ainda dá para melhorar. Que tal dar uma volta pela História e pela Cultura antes da revanche?</div>
+        }
+
+        <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+            <a asp-controller="Quiz" asp-action="Index" class="btn btn-warning rounded-pill px-4">Jogar novamente</a>
+            <a asp-controller="Ranking" asp-action="Index" class="btn btn-primary rounded-pill px-4">Ver ranking</a>
+            <a asp-controller="Clube" asp-action="Index" class="btn btn-outline-secondary rounded-pill px-4">Voltar ao Clube</a>
+        </div>
+    </div>
+</div>
